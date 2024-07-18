@@ -1,28 +1,17 @@
 // _worker.src.js
 import { connect } from "cloudflare:sockets";
-let password = 'auto';
+let password = 'whxdev';
 let proxyIP = '';
 // The user name and password do not contain special characters
 // Setting the address will ignore proxyIP
 // Example:  user:pass@host:port  or  host:port
 let socks5Address = '';
 
-let addresses = [
-	//当sub为空时启用本地优选域名/优选IP，若不带端口号 TLS默认端口为443，#号后为备注别名
-	'cf.090227.xyz:443#加入我的频道t.me/CMLiussss解锁更多优选节点',
-	'time.is#你可以只放域名 如下',
-	'www.visa.com.sg',
-	'skk.moe#也可以放域名带端口 如下',
-	'www.wto.org:8443',
-	'www.csgo.com:2087#节点名放在井号之后即可',
-	'icook.hk#若不带端口号默认端口为443',
-	'104.17.152.41#IP也可以',
-	'[2606:4700:e7:25:4b9:f8f8:9bfb:774a]#IPv6也OK',
-];
+let addresses = [];
 
 let sub = ''; 
-let subconverter = 'subapi-loadbalancing.pages.dev';// clash订阅转换后端，目前使用CM的订阅转换功能。自带虚假节点信息防泄露
-let subconfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"; //订阅配置文件
+let subconverter = '';// clash订阅转换后端，目前使用CM的订阅转换功能。自带虚假节点信息防泄露
+let subconfig = ""; //订阅配置文件
 let subProtocol = 'https';
 let RproxyIP = 'false';
 
@@ -30,11 +19,11 @@ let addressesapi = [];
 let addressescsv = [];
 let DLS = 8;
 
-let FileName = 'epeius';
+let FileName = 'whxdev';
 let BotToken ='';
 let ChatID =''; 
 let proxyhosts = [];//本地代理域名池
-let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
+let proxyhostsURL = '';//在线代理域名池URL
 
 let fakeUserID ;
 let fakeHostName ;
